@@ -42,8 +42,9 @@ def init_git():
 
 
 def install_pre_commit_hooks():
-    # execute(sys.executable, "-m", "pdm", "install", "pre-commit==2.12.0")
-    execute(sys.executable, "-m", "pre_commit", "install")
+    execute(sys.executable, "-m", "pdm", "install", "-dev")
+    execute(sys.executable, "-m", "pdm", "list")
+    # execute(sys.executable, "-m", "pdm", "run", "pre-commit", "install")
 
 
 if __name__ == '__main__':
@@ -62,12 +63,12 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
 
-    try:
-        install_pre_commit_hooks()
-    except Exception as e:
-        print(str(e))
-        print(
-            "Failed to install pre-commit hooks. "
-            "Please run `pre-commit install` by your self. "
-            "For more on pre-commit, please refer to https://pre-commit.com"
-        )
+    # try:
+    #     install_pre_commit_hooks()
+    # except Exception as e:
+    #     print(str(e))
+    #     print(
+    #         "Failed to install pre-commit hooks. "
+    #         "Please run `pre-commit install` by your self. "
+    #         "For more on pre-commit, please refer to https://pre-commit.com"
+    #     )

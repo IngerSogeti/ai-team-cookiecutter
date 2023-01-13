@@ -2,9 +2,11 @@
 """Tests for `{{ cookiecutter.pkg_name }}` package."""
 
 import pytest
-from requests import Response
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
 from click.testing import CliRunner
+{%- endif %}
+from requests import Response
+{% if cookiecutter.command_line_interface|lower == 'click' -%}
 
 from {{ cookiecutter.pkg_name }} import cli
 {%- endif %}

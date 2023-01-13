@@ -150,12 +150,12 @@ upload-pypi:
 
 {%- if cookiecutter.use_bump2version == 'True' %}
 .PHONY: bump-minor
-bump: pull-main bump-version-minor build-package upload-pypi clean
+bump-minor: pull-main bump-version-minor build-package upload-pypi clean
 
 	@echo "\a"
 
 .PHONY: bump-version-minor
-bump-version:
+bump-version-minor:
 	@echo "---------------------------"
 	@echo "- Bumping program version -"
 	@echo "---------------------------"
@@ -167,12 +167,12 @@ bump-version:
 	@echo ""
 
 .PHONY: bump-major
-bump: pull-main bump-version-major build-package upload-pypi clean
+bump-major: pull-main bump-version-major build-package upload-pypi clean
 
 	@echo "\a"
 
 .PHONY: bump-version-major
-bump-version:
+bump-version-major:
 	@echo "---------------------------"
 	@echo "- Bumping program version -"
 	@echo "---------------------------"

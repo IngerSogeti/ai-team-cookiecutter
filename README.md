@@ -12,7 +12,7 @@ conform to best practice.
 
 This tool will create Python project with the following features:
 
-* [Poetry](https://python-poetry.org/): Manage dependency, build and release
+* [Pdm](https://pdm.fming.dev/latest/): Manage dependency, build and release
 * [Mkdocs](https://www.mkdocs.org): Writing your docs in markdown style
 * Testing with [Pytest](https://pytest.org) (unittest is still supported out of the box)
 * [Tox](https://tox.readthedocs.io): Test your code against environment matrix, lint and artifact check

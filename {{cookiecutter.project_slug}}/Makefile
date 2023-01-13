@@ -215,6 +215,7 @@ clean:
 	if exist build rmdir /q /s build
 	if exist site rmdir /q /s site
 	if exist .tox rmdir /q /s .tox
+	if exist .mypy_cache rmdir /q /s .mypy_cache
 	if exist {{ cookiecutter.pkg_name }}.egg-info rmdir /q /s {{ cookiecutter.pkg_name }}.egg-info
 else
 clean:

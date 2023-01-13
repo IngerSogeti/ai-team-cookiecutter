@@ -28,7 +28,7 @@ def test_content(response: Response) -> None:
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 
 
-def test_command_line_interface():
+def test_command_line_interface() -> None:
     """Test the CLI."""
     runner = CliRunner()
 

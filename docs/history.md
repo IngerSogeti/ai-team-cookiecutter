@@ -1,20 +1,20 @@
-# Cookiecutter PyPackage
+# History
 
-Cookiecutter template for a Python package, built with popular develop tools and
-conform to best practice.
+## v1.1.1
 
-[![CI Status](https://github.com/IngerSogeti/ai-team-cookiecutteractions/workflows/dev.yml/badge.svg)](https://github.com/IngerSogeti/ai-team-cookiecutteractions/workflows/dev.yml)
-[![License](https://img.shields.io/pypi/l/ppw)](https://opensource.org/licenses/BSD-2-Clause)
+* Centralize most of the tool configuration in the `setup.cfg` file
 
-* Documentation: <https://github.com/IngerSogeti/ai-team-cookiecutter>
+## v1.1.0
 
-## Features
+* Add `use_mypy` choice to make mypy optional
 
-This tool will create Python project with the following features:
+## v1.0
+***first release with the following features:***
 
 * [Poetry](https://python-poetry.org/): Manage dependency, build and release
 * [Mkdocs](https://www.mkdocs.org): Writing your docs in markdown style
 * Testing with [Pytest](https://pytest.org) (unittest is still supported out of the box)
+* Code coverage report and endorsed by [Codecov](https://codecov.io)
 * [Tox](https://tox.readthedocs.io): Test your code against environment matrix, lint and artifact check
 * Format with [Black](https://github.com/psf/black) and [Isort](https://github.com/PyCQA/isort)
 * Lint code with [Flake8](https://flake8.pycqa.org) and [Flake8-docstrings](https://pypi.org/project/flake8-docstrings/)
@@ -28,24 +28,3 @@ This tool will create Python project with the following features:
     - publish documents automatically when CI success
     - extract changelog from CHANGELOG and integrate with release notes automatically
 * Host your documentation from [GitHub Pages](https://pages.github.com) with zero-config
-
-## Quickstart
-
-Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
-
-```
-pip install -U cookiecutter
-```
-
-Generate a Python package project:
-
-```
-cookiecutter https://github.com/waynerv/cookiecutter-pypackage.git
-```
-
-Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
-
-# Credits
-
-This repo is forked from [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage.git) [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), which originally forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
-Also credits go out to [lyz-code/cookiecutter-python-project](https://github.com/lyz-code/cookiecutter-python-project)

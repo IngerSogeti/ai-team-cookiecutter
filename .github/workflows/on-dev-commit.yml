@@ -1,0 +1,31 @@
+name: Dev Release
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  pages:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # otherwise, it will fail to push refs to dest repos
+          fetch-depth: 0
+
+      - uses: CG-Sogeti/gh-action-sphinx-pages@v1
+        with:
+          python-version: '3.10'
+          optional-dependencies: docs
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  pdf:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: CG-Sogeti/gh-action-sphinx-latex@v1
+        with:
+          package-installation-command: pip install --upgrade .[docs]

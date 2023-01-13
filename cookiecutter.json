@@ -1,0 +1,18 @@
+{
+    "project_name": "AI Team Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "pkg_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Skeleton project created by Cookiecutter PyPackage",
+    "full_name": "Inger van Boeijen",
+    "email": "{{ cookiecutter.full_name.lower().replace(' ', '.')}}@sogeti.com",
+    "github_username": "github_username",
+    "version": "0.1.0",
+    "open_source_license": ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"],
+    "docstrings_style": ["google", "numpy", "pep257"],
+    "command_line_interface": ["Click", "No command-line interface"],
+    "flake8": ["simple", "extensive"],
+    "use_bump2version": [true, false],
+    "use_mypy": [true, false],
+    "install_precommit_hooks": [true, false],
+    "_copy_without_render": ["docs/changelog.md", "docs/contributing.md", "docs/index.md", ".github/workflows/*.yml"]
+}

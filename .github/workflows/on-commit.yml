@@ -1,0 +1,39 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  linting:
+    name: Code Linting
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: CG-Sogeti/gh-action-python-linting@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+          optional-dependencies: lint
+          black: true
+          isort: true
+          flake8: true
+          rstcheck: true
+          verify-lock: true
+          pre-commit: true
+
+  pytest:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: CG-Sogeti/gh-action-python-testing@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+          optional-dependencies: test

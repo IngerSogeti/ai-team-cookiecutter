@@ -1,0 +1,21 @@
+[flake8]
+max-line-length = 120
+docstring-convention = {{ cookiecutter.docstrings_style }}
+# E203: Conflicts with black
+# D107: Many constructors don't need clarification
+# D203: Conflicts with D211 and outdated since PEP257
+# D213: Conflicts with D212
+# D413: Not valid by PEP257 and bloats docstrings
+# D416: Only used in Google-style docstrings
+extend-ignore = D107,D203,D212,D402,D413,D416
+exclude =
+    *.pyc,
+    __pycache__,
+    */docs/conf.py,
+    */dist,
+    docs/conf.py,
+    dist,
+    # Ignore any folder or file starting with a dot
+    .*,
+per-file-ignores =
+    tests/*:D100,D101,D102,D103,D104,D105,D106,D107

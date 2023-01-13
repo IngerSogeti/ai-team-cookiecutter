@@ -7,7 +7,7 @@
     "email": "{{ cookiecutter.full_name.lower().replace(' ', '.')}}@sogeti.com",
     "github_username": "github_username",
     "version": "0.1.0",
-    "open_source_license": ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"],
+    "open_source_license": ["Not open source", "MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only"],
     "docstrings_style": ["google", "numpy", "pep257"],
     "command_line_interface": ["Click", "No command-line interface"],
     "flake8": ["simple", "extensive"],
